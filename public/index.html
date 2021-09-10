@@ -24,6 +24,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+    <!-- New tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -35,9 +38,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div class="newtweet">
+      <div class="headernewtweet">
         <strong>Write</strong> a new tweet <br>
-        <i class="fas fa-angle-double-down newtweet-arrow"></i>
+        <i class="fas fa-angle-double-down headernewtweet-arrow"></i>
       </div>
     </nav>
 
@@ -53,9 +56,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>H1 Bacon ipsum dolor amet fatback burgdoggen t-bone short ribs tail brisket.</h1>
-      <h2>H2 Bacon ipsum dolor amet fatback burgdoggen t-bone short ribs tail brisket.</h2>
-      <p>Bacon ipsum dolor amet fatback burgdoggen t-bone short ribs tail brisket. Pancetta spare ribs cupim landjaeger, jowl chicken salami porchetta pork. Ham meatball filet mignon, jowl short ribs shankle porchetta chuck kielbasa tri-tip cow picanha pork. Meatloaf rump pork loin pork chop, corned beef drumstick flank ball tip beef ribs burgdoggen. Kielbasa chislic burgdoggen pig picanha corned beef beef, shankle pancetta porchetta t-bone hamburger turkey frankfurter. Turkey short ribs boudin hamburger pork, capicola tail sausage leberkas pastrami prosciutto. Pork chislic chicken boudin short loin ground round short ribs bacon frankfurter cow doner strip steak andouille pastrami buffalo.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text"><strong>What are you humming about?</strong></label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="new-tweet-bottom">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>

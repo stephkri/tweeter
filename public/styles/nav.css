@@ -14,12 +14,12 @@ nav > span {
   font-family: 'Bungee', cursive;
 }
 
-.newtweet {
+.headernewtweet {
   float: right;
   text-align: center;
   font-size: 24px;
 }
 
-.newtweet-arrow {
+.headernewtweet-arrow {
   color: red;
 }
