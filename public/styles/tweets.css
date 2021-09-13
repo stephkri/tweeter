@@ -1,0 +1,8 @@
+article.tweet {
+  border: 5px solid #545149;
+}
+
+article.tweet header {
+  background-color: inherit;
+  background-image: none;
+}
