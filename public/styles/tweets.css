@@ -15,19 +15,21 @@ article.tweet header {
   color: #545149;
   height: auto;
   width: auto;
+  float: left;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 10px;
-  padding-top: none;
+  flex-direction: row;
+  padding: 2%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-right {
   display: flex;
-  align-self: flex-end;
-  float: right;
-  padding-right: 10px;
   color: #cbcbe0;
 }
 
@@ -53,10 +55,12 @@ article.tweet footer {
 .icons {
   display: flex;
   align-self: center;
-  justify-content: space-between;
-  align-content: space-between;
-  align-items: flex-end;
   color: #42539C;
+}
+
+.icons.fas {
+  display: flex;
+  justify-content: space-between;
 }
 
 .fa-flag:hover {
