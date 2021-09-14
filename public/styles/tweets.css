@@ -33,6 +33,11 @@ article.tweet header {
   color: #cbcbe0;
 }
 
+.username {
+  font-weight: normal;
+  padding-left: 20px;
+}
+
 .tweet-proper {
   border-bottom: 5px solid #545149;
   margin-left: 2%;
@@ -58,9 +63,8 @@ article.tweet footer {
   color: #42539C;
 }
 
-.icons.fas {
-  display: flex;
-  justify-content: space-between;
+.fapad {
+  padding-left: 10px;
 }
 
 .fa-flag:hover {
