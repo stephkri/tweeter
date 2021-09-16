@@ -45,26 +45,33 @@ $(document).ready(function() {
     });
   };
 
-  loadTweets();
+  const isGoodLength = function(tweet) {
+    if (tweet.length > 140 || tweet.length === 0) {
+      return false;
+    }
+    return true;
+  }
 
   $(this).submit(function(event) {
     event.preventDefault();
     console.log(event);
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
-    if ((rawText.length > 140) || (rawText.length === 0)) {
+    if (!isGoodLength(rawText)) {
       alert('Invalid tweet; please enter a tweet that is between 1 and 140 characters.');
+      return;
     }
-    if (rawText.length > 0 && rawText.length <= 140) {
-      $.post("/tweets",
+
+    $.post("/tweets",
     {
       text: rawText
     },
     function(data, status){
       //alert("Data: " + data + "\nStatus: " + status);
       loadTweets();
-    });  
-    }
+    });
+
   });
+
 
 });
