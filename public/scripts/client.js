@@ -48,18 +48,23 @@ $(document).ready(function() {
   loadTweets();
 
   $(this).submit(function(event) {
+    event.preventDefault();
     console.log(event);
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
-    event.preventDefault();
-    $.post("/tweets",
+    if ((rawText.length > 140) || (rawText.length === 0)) {
+      alert('Invalid tweet; please enter a tweet that is between 1 and 140 characters.');
+    }
+    if (rawText.length > 0 && rawText.length <= 140) {
+      $.post("/tweets",
     {
       text: rawText
     },
     function(data, status){
       //alert("Data: " + data + "\nStatus: " + status);
       loadTweets();
-    });
+    });  
+    }
   });
 
 });
