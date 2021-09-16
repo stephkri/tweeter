@@ -52,12 +52,12 @@ $(document).ready(function() {
     });
   };
 
-  const isTooLong = function(tweet) {
-    if (tweet.length > 140) {
+  const isTooLong = function(str) {
+    if (str.length > 140) {
       return true;
     }
     return false;
-  }
+  };
 
   $(this).submit(function(event) {
     event.preventDefault();
