@@ -67,6 +67,10 @@
         <form method="POST" action="/tweets">
           <label for="tweet-text"><strong>What are you humming about?</strong></label>
           <textarea name="text" id="tweet-text"></textarea>
+          <div class="new-tweet-alerts">
+            <span id="tweet-empty">Tweet empty. Please enter at least one character.</span>
+            <span id="tweet-too-long">Tweet too long. Please limit your tweet to 140 characters or less.</span>
+          </div>
           <div class="new-tweet-bottom">
             <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

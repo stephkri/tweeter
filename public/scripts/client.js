@@ -64,13 +64,19 @@ $(document).ready(function() {
     console.log(event);
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
+    const tweetTooLong = document.getElementById('tweet-too-long');
+    const tweetEmpty = document.getElementById('tweet-empty');
+    
+    $(tweetTooLong).css("display", "none");
+    $(tweetEmpty).css("display", "none");
+
     if (isTooLong(rawText)) {
-      alert('Your tweet is too long! Please limit your tweet to 140 characters.');
+      $(tweetTooLong).css("display", "inline");
       return;
     }
 
     if (!rawText) {
-      alert('Tweet empty. Please enter at least one character.');
+      $(tweetEmpty).css("display", "inline");
       return;
     }
 

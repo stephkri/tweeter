@@ -31,3 +31,18 @@
   background-color: #42539C;
   color: white;
 }
+
+.new-tweet-alerts {
+  color: red;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+#tweet-empty {
+  display: none;
+}
+
+#tweet-too-long {
+  display: none;
+}
