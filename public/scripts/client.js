@@ -5,6 +5,13 @@
  */
 
 $(document).ready(function() {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
     const $tweet = $(`
     <article class="tweet">
@@ -18,7 +25,7 @@ $(document).ready(function() {
       </div>
     </header>
     <div class="tweet-proper">
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
     </div>
     <footer>
       <div><p>${tweet['created_at']}</p></div>
