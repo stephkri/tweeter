@@ -52,11 +52,11 @@ $(document).ready(function() {
     });
   };
 
-  const isGoodLength = function(tweet) {
-    if (tweet.length > 140 || tweet.length === 0) {
-      return false;
+  const isTooLong = function(tweet) {
+    if (tweet.length > 140) {
+      return true;
     }
-    return true;
+    return false;
   }
 
   $(this).submit(function(event) {
@@ -64,8 +64,13 @@ $(document).ready(function() {
     console.log(event);
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
-    if (!isGoodLength(rawText)) {
-      alert('Invalid tweet; please enter a tweet that is between 1 and 140 characters.');
+    if (isTooLong(rawText)) {
+      alert('Your tweet is too long! Please limit your tweet to 140 characters.');
+      return;
+    }
+
+    if (!rawText) {
+      alert('Tweet empty. Please enter at least one character.');
       return;
     }
 
