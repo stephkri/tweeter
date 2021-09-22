@@ -28,7 +28,7 @@ $(document).ready(function() {
       <p>${escape(tweet.content.text)}</p>
     </div>
     <footer>
-      <div><p>${tweet['created_at']}</p></div>
+      <div><p>${timeago.format(tweet['created_at'])}</p></div>
       <div class="icons">
         <i class="fas fapad fa-flag"></i>
         <i class="fas fapad fa-retweet"></i>
