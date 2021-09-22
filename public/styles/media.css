@@ -1,11 +1,28 @@
-/*
 @media (max-width: 768px) {
-  nav {
-    background-color: transparent;
+  body {
+    display: block;
+    background-color: #965300;
+    background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+    background-attachment: fixed;
   }
 
   header {
-    padding-top: 120px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  nav {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    background-color: transparent;
+    position: static;
+  }
+
+  main {
+    width: 100%;
+    margin: 0px;
   }
 }
-*/
