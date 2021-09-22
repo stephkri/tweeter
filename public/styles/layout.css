@@ -23,9 +23,13 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: row;
 }
 
 main {
+  margin-top: 120px;
+  width: 67%;
   padding-left: 5%;
   padding-right: 5%;
   background-color: #f4f1ec;
