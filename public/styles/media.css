@@ -1,24 +1,22 @@
 @media (max-width: 768px) {
   body {
     display: block;
-    background-color: #965300;
-    background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
-    background-attachment: fixed;
   }
 
   header {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    background-color: transparent;
   }
 
   nav {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 20px;
-    background-color: transparent;
     position: static;
+    background-color: #965300;
+    background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+    background-attachment: fixed;
   }
 
   main {
