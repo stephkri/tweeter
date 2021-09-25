@@ -63,7 +63,6 @@ $(document).ready(function() {
 
   $(this).submit(function(event) {
     event.preventDefault();
-    $("#tweets-container").empty();
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
     const tweetTooLong = document.getElementById('tweet-too-long');
@@ -82,12 +81,13 @@ $(document).ready(function() {
       return;
     }
 
+    $("#tweets-container").empty();
+
     $.post("/tweets",
       {
         text: rawText
       },
       function(data, status) {
-      //alert("Data: " + data + "\nStatus: " + status);
         loadTweets();
       });
 
