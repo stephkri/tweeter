@@ -20,3 +20,7 @@ This repository is the starter code for the project; I have forked and cloned th
 - MD5
 
 ## Screenshots
+!["Screenshot of the site with its initial tweets"](https://github.com/stephkri/tweeter/blob/master/screenshots/default-tweets.png)
+!["Screenshot of an error message for an empty tweet"](https://github.com/stephkri/tweeter/blob/master/screenshots/empty-tweet.png)
+!["Screenshot of an error message for a tweet that is too long"](https://github.com/stephkri/tweeter/blob/master/screenshots/long-tweet.png)
+!["Screenshot of the one-column layout for smaller screens"](https://github.com/stephkri/tweeter/blob/master/screenshots/one-column.png)
