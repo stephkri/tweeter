@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -83,13 +83,13 @@ $(document).ready(function() {
     }
 
     $.post("/tweets",
-    {
-      text: rawText
-    },
-    function(data, status){
+      {
+        text: rawText
+      },
+      function(data, status) {
       //alert("Data: " + data + "\nStatus: " + status);
-      loadTweets();
-    });
+        loadTweets();
+      });
 
   });
 
