@@ -63,7 +63,6 @@ $(document).ready(function() {
 
   $(this).submit(function(event) {
     event.preventDefault();
-    console.log(event);
     $("#tweets-container").empty();
     const tweetText = document.getElementById('tweet-text');
     const rawText = tweetText.value;
