@@ -67,6 +67,8 @@ $(document).ready(function() {
     const rawText = tweetText.value;
     const tweetTooLong = document.getElementById('tweet-too-long');
     const tweetEmpty = document.getElementById('tweet-empty');
+    console.log(tweetText);
+    console.log($(tweetText));
     
     $(tweetTooLong).css("display", "none");
     $(tweetEmpty).css("display", "none");
@@ -90,6 +92,8 @@ $(document).ready(function() {
       function(data, status) {
         loadTweets();
       });
+
+      $(tweetText).val('');
 
   });
 
