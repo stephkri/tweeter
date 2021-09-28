@@ -15,4 +15,13 @@ $(document).ready(function() {
     }
   });
 
+  $(this).submit(function() {
+    let val = $('#tweet-text').val();
+    let valLen = val.length;
+    if (!valLen) {
+      const counter = $('#tweet-text').parent()['0']['2'];
+      counter.innerText = '140';
+    }
+  });
+
 });
